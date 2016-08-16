@@ -79,7 +79,7 @@ def roll_hit(num_of_dice, dice_type, hit, modifier, threshold):
     return results
 
 
-@client.event
+@bot.event
 async def on_ready():
     print('Logged in as')
     print(client.user.name)
@@ -176,6 +176,6 @@ async def roll(ctx, roll : str):
         await bot.say(err)
 
 
-client.run(
+bot.run(
     os.environ.get('DISCORD_TOKEN')
 )
