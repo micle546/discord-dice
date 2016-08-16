@@ -1,19 +1,16 @@
 # Discord-Dice-Roller-Bot
-A bot that handles most RPG dice rolls
+A bot that handles most RPG dice rolls - almost entirely stolen from https://github.com/Chaithi/Discord-Dice-Roller-Bot - fixed to use the newer version of discord.py and work with tokens rather thsn username + passwords aaand also run under Heroku.
 
 # Dependencies
 This bot is extended from [Discord.py] (https://github.com/Rapptz/discord.py/). Install Discord.py prior to running this bot.
 
 #Python Version
-This requires Python 3.4.1+. If you are using Python 3.5:
-
-Replace `async def` instead of `@asyncio.corouting` and `await` instead of `yield from`
+This requires Python 3.5+:
 
 # Usage
-1. Create a new Discord account for your bot.
-2. Add the bot to the servers you want.
-3. Place the email and password for the bot in the last line of this script.
-4. Launch script.
+1. Create a Discord application + bot user, get its token and add it as the value of a config variable(/environment variable) called ```DISCORD_TOKEN``` in Heroku
+2. Take the client ID and insert it into this link: https://discordapp.com/oauth2/authorize?client_id=[CLIENT ID HERE]&scope=bot&permissions=0 - This link will let you add the bot to your server, or let others do the same
+3. Launch script
 
 # Commands
 `!roll`
