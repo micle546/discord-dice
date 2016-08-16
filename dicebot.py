@@ -9,6 +9,7 @@
 from random import randint
 import discord # Imported from https://github.com/Rapptz/discord.py
 from discord.ext import commands
+import os
 
 # A dice bot for use with Discord
 bot = commands.Bot(command_prefix='!', description="A bot to handle all your RPG rolling needs")
@@ -174,4 +175,4 @@ async def roll(ctx, roll : str):
         await bot.say(err)
 
 # Create a bot account and manually join it to the server you're wanting. Input email and password below
-bot.run('username', 'password')
+bot.run(os.environ.get('username'), os.environ.get('password'))
