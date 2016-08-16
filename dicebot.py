@@ -96,7 +96,7 @@ async def test(ctx, test:str):
 async def roll(ctx, roll : str):
     a, b, modifier, hit, num_of_dice, threshold, dice_type = 0, 0, 0, 0, 0, 0, 0
     # author: Writer of discord message
-    author = ctx.message.author
+    author = ctx.message.author.split('#')[0]
     if (roll.find('>') != -1):
         roll, threshold = roll.split('>')
     if (roll.find('mod') != -1):
