@@ -26,6 +26,5 @@ async def on_message(message):
         await client.send_message(message.channel, 'Done sleeping')
 
 client.run(
-    os.environ.get('DISCORD_USERNAME'),
-    os.environ.get('DISCORD_PASSWORD')
+    os.environ.get('DISCORD_TOKEN')
 )
