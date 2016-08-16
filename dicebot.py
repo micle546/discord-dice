@@ -5,6 +5,11 @@ import os
 
 client = discord.Client()
 
+bot = commands.Bot(
+    command_prefix='!',
+    description="A bot to handle all your RPG rolling needs"
+)
+
 
 def is_num(s):
     try:
